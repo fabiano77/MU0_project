@@ -29,10 +29,10 @@ rst_n <= 1; clk <= 0; mem_rst_n <= 0; force u_memory.rw = 0; force u_memory.memr
         #5 clk <= 0; force u_memory.addr = 13; force u_memory.in_data = 16'b_0110_0000_0000_0110; #5 clk <= 1; #5 clk <= 0; #5 clk <= 1;  //JNE loop1
         #5 clk <= 0; force u_memory.addr = 14; force u_memory.in_data = 16'b_0111_0000_0000_0000; #5 clk <= 1; #5 clk <= 0; #5 clk <= 1;  //STP
         #5 clk <= 0; force u_memory.addr = 15; force u_memory.in_data = 16'b_xxxx_xxxx_xxxx_xxxx; #5 clk <= 1; #5 clk <= 0; #5 clk <= 1;  //----
-        #5 clk <= 0; force u_memory.addr = 16; force u_memory.in_data = 16'b_0000_0000_0001_0010; #5 clk <= 1; #5 clk <= 0; #5 clk <= 1;  //N
+        #5 clk <= 0; force u_memory.addr = 16; force u_memory.in_data = 16'b_0000_0000_0100_0000; #5 clk <= 1; #5 clk <= 0; #5 clk <= 1;  //N
         #5 clk <= 0; force u_memory.addr = 17; force u_memory.in_data = 16'b_0000_0000_0000_0000; #5 clk <= 1; #5 clk <= 0; #5 clk <= 1;  //i
         #5 clk <= 0; force u_memory.addr = 18; force u_memory.in_data = 16'b_0000_0000_0000_0000; #5 clk <= 1; #5 clk <= 0; #5 clk <= 1;  //sum
-        #5 clk <= 0; force u_memory.addr = 19; force u_memory.in_data = 16'b_0000_0000_0000_0010; #5 clk <= 1; #5 clk <= 0; #5 clk <= 1;  //S
+        #5 clk <= 0; force u_memory.addr = 19; force u_memory.in_data = 16'b_0000_0000_0000_0001; #5 clk <= 1; #5 clk <= 0; #5 clk <= 1;  //S
         #5 clk <= 0; force u_memory.addr = 20; force u_memory.in_data = 16'b_0000_0000_0000_0001; #5 clk <= 1; #5 clk <= 0;               //v1
         mem_rst_n <= 1; release u_memory.memrq; release u_memory.addr; release u_memory.in_data;release u_memory.rw; 
         #5 clk <= ~clk; #5 clk <= ~clk; #5 clk <= ~clk; #5 clk <= ~clk; #5 rst_n <= 1; clk <= ~clk;
