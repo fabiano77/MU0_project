@@ -1,5 +1,4 @@
-module ALU(in_A, in_B, alufs,
-           out);
+module ALU(in_A, in_B, alufs, out);
     
     input [15:0] in_A, in_B;
     input [2:0] alufs;

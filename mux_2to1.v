@@ -1,5 +1,4 @@
-module mux_2to1(i0, i1, sel,
-                out);
+module mux_2to1(i0, i1, sel, out);
     
     parameter WORD = 16;
     input [WORD-1:0]i0, i1;
