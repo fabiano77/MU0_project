@@ -30,13 +30,13 @@ module control_logic(in_opcode, acc_15, accz, clk, rst_n, a_sel, b_sel,
 
     always @(posedge clk) begin
         if(~rst_n) begin
-            ft <= 1'b_0; n_ft <= 1'b_0;
+            ft <= 1'b_0; //n_ft <= 1'b_0;
         end
         else
             ft <= n_ft;
     end
     
-    always @(p_state or negedge rst_n) begin
+    always @(p_state or rst_n) begin
         if (~rst_n)begin
             {a_sel, b_sel, acc_ce, pc_ce, ir_ce, acc_oe, memrq, rnw} <= {8'b_0_0_1_1_1_0__1_1}; alufs <= 0;
         end
